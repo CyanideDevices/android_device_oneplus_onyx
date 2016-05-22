@@ -28,7 +28,7 @@ TARGET_NO_RADIOIMAGE := true
 TARGET_BOARD_PLATFORM := msm8974
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
 
-USE_CLANG_PLATFORM_BUILD := true
+#USE_CLANG_PLATFORM_BUILD := true
 
 # Architecture
 TARGET_ARCH := arm
@@ -36,19 +36,6 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := krait
-
-# Uber Optimizations
-CLANG_O3 := true
-STRICT_ALIASING := false
-KRAIT_TUNINGS := true
-GRAPHITE_OPTS := false
-ENABLE_GCCONLY := false
-
-# Kernel Toolchain
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.9-uber/bin
-KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
-# Rom Toolchain
-TARGET_GCC_VERSION_EXP := 4.9-uber
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
@@ -200,3 +187,8 @@ TARGET_LDPRELOAD := libNimsWrap.so
 BLOCK_BASED_OTA := false
 
 -include vendor/oneplus/onyx/BoardConfigVendor.mk
+
+TARGET_CYANIDE_ROM=4.9
+TARGET_NDK_CYANIDE_ROM=4.9
+TARGET_CYANIDE_ARM=4.8
+
